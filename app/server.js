@@ -1,24 +1,33 @@
 const express = require('express');
 const path = require('path');
-//Setup express app
+const dotenv = require("dotenv").config();
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+const User = require('./models/user');
+const router = require('./routes/api.js')
+
+
 const app = express();
 
-//Set app port
-//Get port from Heroku vars
 var port = process.env.PORT || 8080;
 
-//Serve static files from React app
+mongoose.connect(process.env.MONGO_URI);
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-//Api
 
 
-//Catchall for requests not matching
+app.use('/api', router);
+
 app.get('*', (req, res)=>{
   res.sendFile(path.join(__dirname,'client/build/index.html'))
 })
 
-//Listen for requests
+
 app.listen(port, function(){
   console.log('Listening to port: '+port);
 })
