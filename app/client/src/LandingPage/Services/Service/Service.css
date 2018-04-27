@@ -1,0 +1,31 @@
+.Service{
+  display: flex;
+  flex-direction: column;
+
+  align-self: center;
+  text-align: center;
+  height: 90%;
+  box-sizing: border-box;
+
+  padding: 30% 20px 20px 20px;
+
+}
+
+.Service-icon{
+  align-self: center;
+  font-size: 6.0em;
+  color: rgb(162, 162, 162);
+}
+
+.Service-title{
+  color: rgb(62, 62, 62);
+  font-size: 1.5em;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.Service-text{
+  color: rgb(62, 62, 62);
+  font-size: 1.2em;
+  font-family: inherit;
+}

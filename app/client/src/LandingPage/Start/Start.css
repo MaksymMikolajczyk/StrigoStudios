@@ -1,0 +1,30 @@
+.Start-wrapper{
+  width:100%;
+  height:auto;
+  margin: 0;
+  padding: 0;
+}
+
+.Start-banner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1 0 auto;
+  height: 100vh;
+  padding-top: 80px;
+
+
+}
+
+.Start-logo{
+  align-self: center;
+}
+
+.Start-h1{
+    align-self: center;
+    font-size: 5.0em;
+    font-family: 'Berylium', serif;
+    color: rgb(238, 238, 238);
+    font-variant: small-caps;
+}
