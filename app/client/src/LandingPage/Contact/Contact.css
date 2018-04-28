@@ -16,7 +16,7 @@
 
 .Contact-social-media{
   display: flex;
-  height: 70%;
+  height: 20%;
   justify-content: space-around;
   color: rgb(110, 110, 110);
   font-size: 4.0em;
@@ -27,4 +27,38 @@
 .Contact-icon{
   align-self: flex-end;
     cursor: pointer;
+}
+
+
+.Contact .EmailResult{
+  font-family: 'OpenSans', serif;
+  font-size: 3.5em;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.Contact button{
+  font-family: inherit;
+  font-size: 2.0em;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 20px;
+  background-color: rgb(110, 110, 110);
+  color: rgb(212, 212, 212)
+}
+
+.Contact button:hover{
+  color: rgb(233, 155, 38);
+  box-shadow: 2px 2px 8px #ccc;
+
+}
+
+.Contact .Success{
+    color: rgb(83, 126, 171);
+}
+.Contact .Fail{
+    color: rgb(208, 106, 106);
 }
