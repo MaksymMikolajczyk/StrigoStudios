@@ -1,6 +1,7 @@
 .Project{
   width: 100%;
-  height: auto;
+  max-height: 426px;
+
   display: flex;
   justify-content: space-between;
   background-color: rgb(157, 157, 157);
@@ -12,6 +13,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 50px;
+  min-width: 300px;
 
 }
 
@@ -48,4 +50,49 @@
 
 .end{
   clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%);
+}
+
+@media only screen and (max-width: 1100px) {
+
+
+
+  .Project .text{
+    display: block;
+    padding: 0px 0px 0px 20px;
+
+  }
+}
+
+@media only screen and (max-width: 975px) {
+
+  .light{
+    background-color:rgba(156, 151, 141, 1);
+  }
+
+  .dark{
+    background-color:rgba(94, 129, 145, 1);
+  }
+
+  .Project img{
+    display: none;
+  }
+  .Project .text{
+    width: 100vw;
+  }
+
+  .Project .text h1{
+
+    font-size: 3.0em;
+    width: 70%;
+    margin: 30px auto;
+    padding: 0px 20px;
+  }
+
+  .Project .text p{
+
+    font-size: 2.0em;
+    width: 70%;
+    margin: 30px auto;
+    padding: 0px 20px;
+  }
 }

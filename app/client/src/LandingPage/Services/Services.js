@@ -35,6 +35,7 @@ const services = (props) => {
         text="Gry planszowe i fabularne to nasza pasja. Mamy wiele mniejszych projektów usprawniajacych i wspomagających to doświadczenie."
         icon={<FaFortAwesome className="Service-icon"/>}/>
     </div>
+
   )
 }
 

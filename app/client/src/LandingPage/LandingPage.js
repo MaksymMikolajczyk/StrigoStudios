@@ -27,7 +27,11 @@ class LandingPage extends React.Component {
 
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
+    if(window.innerWidth >= 910){
+      window.addEventListener('scroll', this.handleScroll)
+    }
+
+
   }
   componentWillUnmount() {
     window.addEventListener('scroll', this.handleScroll);

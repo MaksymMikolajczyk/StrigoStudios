@@ -62,3 +62,13 @@
 .Contact .Fail{
     color: rgb(208, 106, 106);
 }
+
+
+@media only screen and (max-width: 900px) {
+  .Contact-social-media{
+
+    height: 10%;
+
+
+  }
+}
