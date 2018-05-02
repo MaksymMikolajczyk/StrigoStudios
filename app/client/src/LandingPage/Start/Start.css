@@ -15,7 +15,8 @@
   width: 100%;
   padding-top: 80px;
 
-
+  animation-name: fadeIn;
+  animation-duration: 2s;
 }
 
 .Start-logo{
@@ -28,4 +29,13 @@
     font-family: 'Berylium', serif;
     color: rgb(238, 238, 238);
     font-variant: small-caps;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0
+  }
+  to{
+    opacity: 1
+  }
 }

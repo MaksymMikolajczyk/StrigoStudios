@@ -9,6 +9,9 @@
 
   padding: 30% 20px 20px 20px;
 
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+
 }
 
 .Service-icon{
@@ -28,4 +31,8 @@
   color: rgb(62, 62, 62);
   font-size: 1.2em;
   font-family: inherit;
+}
+
+.Service-Show{
+  opacity: 1;
 }

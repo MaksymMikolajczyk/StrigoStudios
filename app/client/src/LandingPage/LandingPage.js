@@ -21,7 +21,9 @@ class LandingPage extends React.Component {
   state = {
     latestScrollPosition: 0,
     currentRef: 'Start',
-    showNavBar: false
+    showNavBar: false,
+    seenServices: false,
+    seenProjects: false
   }
 
 
@@ -45,11 +47,17 @@ class LandingPage extends React.Component {
           switch (this.state.currentRef) {
             case 'Start':
               scrollToComponent(this.Services.current)
+              if(!this.state.seenServices){
+                this.setState({seenServices: true})
+              }
               setTimeout(()=>this.setState({currentRef: 'Services'}), 500)
 
               break;
             case 'Services':
               scrollToComponent(this.Projects.current)
+              if(!this.state.seenProjects){
+                this.setState({seenProjects: true})
+              }
               setTimeout(()=>this.setState({currentRef: 'Projects'}), 500)
 
               break;
@@ -99,11 +107,11 @@ class LandingPage extends React.Component {
         </div>
 
         <div ref={this.Services}>
-          <Services />
+          <Services playAnim={this.state.seenServices} />
         </div>
 
         <div ref={this.Projects}>
-          <Projects />
+          <Projects playAnim={this.state.seenProjects}/>
         </div>
 
         <div ref={this.Contact}>

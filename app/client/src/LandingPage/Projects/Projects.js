@@ -13,9 +13,11 @@ const projects = (props) => {
 
 
       <div className="Projects">
-        <Parallax image="Background-Projects"/>
+        <Parallax image="Background-Projects" className="Projects-Parallax"/>
         <h1>Nasze flagowe produkty</h1>
         <Project
+          playAnim={props.playAnim}
+          transitionDelay = "0.5s"
           color="dark"
           title="Breast Idea"
           text="Zintegorwany system parametrycznej oceny piersi."
@@ -24,6 +26,8 @@ const projects = (props) => {
           imageAlt="BI"
           />
         <Project
+          playAnim={props.playAnim}
+          transitionDelay = "1.3s"
           color="light"
           title="Opti Calc"
           text="Zestaw narzędzi dla okulistów."

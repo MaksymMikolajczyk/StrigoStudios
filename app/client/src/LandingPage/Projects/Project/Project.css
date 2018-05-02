@@ -6,6 +6,7 @@
   justify-content: space-between;
   background-color: rgb(157, 157, 157);
   margin: 50px auto;
+  transition: clip-path 1s ease-out;
 }
 
 .Project .text{
@@ -38,10 +39,14 @@
 
 .light{
   background-color:rgba(219, 216, 209, 0.62);
+  clip-path: inset(0 0 0 100%);
+
 }
 
 .dark{
   background-color:rgba(94, 129, 145, 0.61);
+  clip-path: inset(0 100% 0 0);
+
 }
 
 .start{
@@ -67,6 +72,7 @@
 
   .light{
     background-color:rgba(156, 151, 141, 1);
+
   }
 
   .dark{
@@ -78,6 +84,7 @@
   }
   .Project .text{
     width: 100vw;
+
   }
 
   .Project .text h1{
@@ -95,4 +102,9 @@
     margin: 30px auto;
     padding: 0px 20px;
   }
+}
+
+
+.Project-Show{
+  clip-path: inset(0 0 0 0);
 }
