@@ -21,7 +21,7 @@ class LandingPage extends React.Component {
   state = {
     latestScrollPosition: 0,
     currentRef: 'Start',
-    showNavBar: false,
+    showNavBar: true,
     seenServices: false,
     seenProjects: false
   }
@@ -50,7 +50,7 @@ class LandingPage extends React.Component {
               if(!this.state.seenServices){
                 this.setState({seenServices: true})
               }
-              setTimeout(()=>this.setState({currentRef: 'Services'}), 500)
+              setTimeout(()=>this.setState({currentRef: 'Services'}), 700)
 
               break;
             case 'Services':
@@ -58,12 +58,12 @@ class LandingPage extends React.Component {
               if(!this.state.seenProjects){
                 this.setState({seenProjects: true})
               }
-              setTimeout(()=>this.setState({currentRef: 'Projects'}), 500)
+              setTimeout(()=>this.setState({currentRef: 'Projects'}), 700)
 
               break;
             case 'Projects':
               scrollToComponent(this.Contact.current)
-              setTimeout(()=>this.setState({currentRef: 'Contact'}), 500)
+              setTimeout(()=>this.setState({currentRef: 'Contact'}), 700)
 
               break;
             default:
@@ -75,15 +75,15 @@ class LandingPage extends React.Component {
           switch (this.state.currentRef) {
             case 'Contact':
               scrollToComponent(this.Projects.current)
-              setTimeout(()=>this.setState({currentRef: 'Projects'}), 500)
+              setTimeout(()=>this.setState({currentRef: 'Projects'}), 700)
               break;
             case 'Projects':
               scrollToComponent(this.Services.current)
-              setTimeout(()=>this.setState({currentRef: 'Services'}), 500)
+              setTimeout(()=>this.setState({currentRef: 'Services'}), 700)
               break;
             case 'Services':
-              scrollToComponent(this.Start.current)
-              setTimeout(()=>this.setState({currentRef: 'Start'}), 500)
+              scrollToComponent(this.Start.current, { align: 'top'})
+              setTimeout(()=>this.setState({currentRef: 'Start'}), 700)
 
               break;
             default:
@@ -93,17 +93,21 @@ class LandingPage extends React.Component {
           //this.setState({showNavBar:true})
         }
         this.setState({latestScrollPosition: window.scrollY})
-    this.setState({latestScrollPosition: window.scrollY})
 
+
+
+  }
+  handleLoginClick = () => {
+    this.props.history.push('/auth')
   }
 
   render () {
     const navBar =  this.state.showNavBar ? <NavBar/>:null
     return(
       <div className="LandingPage">
-        {navBar}
+
         <div ref={this.Start}>
-          <Start/>
+          <Start click={this.handleLoginClick}/>
         </div>
 
         <div ref={this.Services}>

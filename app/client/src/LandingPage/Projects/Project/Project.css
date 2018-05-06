@@ -72,11 +72,12 @@
 
   .light{
     background-color:rgba(156, 151, 141, 1);
-
+    clip-path: none;
   }
 
   .dark{
     background-color:rgba(94, 129, 145, 1);
+    clip-path: none;
   }
 
   .Project img{

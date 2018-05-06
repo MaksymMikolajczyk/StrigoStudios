@@ -12,26 +12,26 @@ class Parallax extends React.Component {
     blur: '0px'
   }
 
-
-    componentDidMount() {
-      window.addEventListener('scroll', this.handleScroll)
-    }
-    componentWillUnmount() {
-      window.addEventListener('scroll', this.handleScroll);
-    }
-
-    handleScroll = (event) => {
-      //console.log(this.Parallax.current.getBoundingClientRect().top)
-
-      let blur = Math.abs(this.Parallax.current.getBoundingClientRect().top / 100)
-      if(blur >= 0 && blur <= 10){
-        blur = blur+'px'
-        //console.log(blur)
-
-        this.setState({blur: blur})
-      }
-
-    }
+    // 
+    // componentDidMount() {
+    //   window.addEventListener('scroll', this.handleScroll)
+    // }
+    // componentWillUnmount() {
+    //   window.addEventListener('scroll', this.handleScroll);
+    // }
+    //
+    // handleScroll = (event) => {
+    //   //console.log(this.Parallax.current.getBoundingClientRect().top)
+    //
+    //   let blur = Math.abs(this.Parallax.current.getBoundingClientRect().top / 100)
+    //   if(blur >= 0 && blur <= 10){
+    //     blur = blur+'px'
+    //     //console.log(blur)
+    //
+    //     this.setState({blur: blur})
+    //   }
+    //
+    // }
 
   render () {
 

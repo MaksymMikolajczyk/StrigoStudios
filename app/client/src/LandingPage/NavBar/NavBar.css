@@ -2,7 +2,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  height: 80px;
+  height: 60px;
   width: 100%;
   background-color: rgba(108, 125, 133, 0.6);
   display: flex;
@@ -21,12 +21,13 @@
   font-variant: small-caps;
   text-decoration: none;
   color: #214150;
-  height: 80px;
-  line-height: 80px;
+  height: 60px;
+  line-height: 60px;
   flex-grow: 1;
   align-self: center;
   text-align: center;
   border-left: 1px solid rgb(191, 191, 191);
+  cursor: pointer;
 }
 
 .NavBar a:hover{

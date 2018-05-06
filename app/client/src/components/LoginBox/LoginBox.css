@@ -2,7 +2,7 @@
 .LoginBox{
   margin: auto;
   padding: 25px;
-  width: 20vw;
+  min-width: 20vw;
   border-radius: 10%;
   background-color: rgb(30, 30, 35);
   display: -ms-flexbox;
@@ -13,6 +13,11 @@
       justify-content: center;
 }
 .LoginBox-title{
+  text-align: center;
+  font-size: 5.0em;
+  font-family: 'Berylium', serif;
+
+  color: rgb(227, 227, 227);
   font-size: 3em;
   font-variant: small-caps;
   padding: 0;
@@ -61,6 +66,8 @@
   background-color: rgb(157, 108, 44);
   color: inherit;
   cursor: pointer;
+  color: rgb(227, 227, 227);
+  font-family: 'Alegreya', serif;
 }
 
 .LoginBox button:hover{
@@ -69,6 +76,7 @@
 }
 
 .LoginBox p {
+  text-align: center;
   margin-top: 30px;
   font: inherit;
   color:#e3b37b;

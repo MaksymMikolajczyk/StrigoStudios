@@ -6,7 +6,7 @@
 }
 
 .Contact h1{
-  padding-top: 20px;
+  padding-top: 100px;
   font-variant: small-caps;
   font-family: 'Alegreya', serif;
   font-size: 4.5em;
@@ -16,7 +16,7 @@
 
 .Contact-social-media{
   display: flex;
-  height: 20%;
+  height: 10%;
   justify-content: space-around;
   color: rgb(110, 110, 110);
   font-size: 4.0em;

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Route} from 'react-router-dom'
 import './App.css';
 
 import LandingPage from 'LandingPage/LandingPage'
@@ -8,8 +9,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <LandingPage/>
-
+        <Route path="/" exact component={LandingPage} />
+        <Route path="/auth" exact component={LoginBox}/>
       </div>
     );
   }

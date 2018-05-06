@@ -36,3 +36,9 @@
 .Service-Show{
   opacity: 1;
 }
+
+@media only screen and (max-width: 975px) {
+  .Service{
+    opacity: 1;
+  }
+}
